@@ -27,5 +27,34 @@
     </properties>
 
 
+    <dependencyManagement>
+        <!-- 统一管理子服务版本 -->
+        <dependencies>
+            <dependency>
+                <groupId>cn.sp</groupId>
+                <artifactId>api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.sp</groupId>
+                <artifactId>consumer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.sp</groupId>
+                <artifactId>provider</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.sp</groupId>
+                <artifactId>rpc-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+
 
 </project>
