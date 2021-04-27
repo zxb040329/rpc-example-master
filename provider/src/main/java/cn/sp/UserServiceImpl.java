@@ -1,8 +1,8 @@
 package cn.sp;
 
-import cn.sp.rpc.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import cn.sp.rpc.annotation.Service;
 
 @Service
 public class UserServiceImpl implements UserService{
