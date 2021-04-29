@@ -37,7 +37,7 @@ public class ClientProxyFactory {
     private LoadBalance loadBalance;
 
     /**
-     * 通过Java动态代理获取服务代理类
+     * 通过Java动态代理获取服务代理类 (JDK动态代理）
      *
      * @param clazz
      * @param <T>

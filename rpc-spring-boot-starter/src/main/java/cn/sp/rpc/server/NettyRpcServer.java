@@ -62,7 +62,7 @@ public class NettyRpcServer extends RpcServer {
 
             // 启动服务
             ChannelFuture future = b.bind(port).sync();
-            logger.debug("Server started successfully.");
+            logger.info("Server started successfully.");
             channel = future.channel();
             // 等待服务通道关闭
             future.channel().closeFuture().sync();

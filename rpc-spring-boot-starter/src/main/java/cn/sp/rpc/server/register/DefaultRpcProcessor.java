@@ -44,6 +44,7 @@ public class DefaultRpcProcessor implements ApplicationListener<ContextRefreshed
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
+        logger.info("===================监听器启动了====================");
         // Spring启动完毕过后会收到一个事件通知
         if (Objects.isNull(event.getApplicationContext().getParent())){
             ApplicationContext context = event.getApplicationContext();
@@ -74,6 +75,7 @@ public class DefaultRpcProcessor implements ApplicationListener<ContextRefreshed
                 Object object = context.getBean(name);
                 field.setAccessible(true);
                 try {
+                    //Todo 直接赋值？而非先将bean加入容器之后再注入
                     field.set(object,clientProxyFactory.getProxy(fieldClass));
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
